@@ -45,7 +45,7 @@ class Form extends React.Component {
                     <button onClick={this.handleEdit}>cancel</button>
                     <button onClick={this.handleSave}>save</button>
                 </div>  
-            );
+            )
         }
         return(
             <div align="center">
@@ -53,7 +53,7 @@ class Form extends React.Component {
                 <p>{"last name: "}{this.state.lastName}</p>
                 <button onClick={this.handleEdit}>edit</button>
             </div>
-        );
+        )
     }
 }
 
