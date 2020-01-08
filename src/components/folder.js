@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/styles.css"
 
-export default class Folder extends React.Component {
+class Folder extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -39,3 +39,5 @@ export default class Folder extends React.Component {
     }
 
 }
+
+export default Folder;
