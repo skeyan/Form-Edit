@@ -32,7 +32,8 @@ class Form extends React.Component {
     handleSave = () => {
         this.setState({
             firstName: this.tempFirstName,
-            lastName: this.tempLastName
+            lastName: this.tempLastName,
+            formToggle: false
         });
     }
     render() {
@@ -43,16 +44,16 @@ class Form extends React.Component {
                         <input placeholder= "First name" type="text" name="firstName" onChange={this.handleFirstNameChange}/>
                         <input placeholder= "Last name"  type="text" name="lastName" onChange={this.handleLastNameChange}/>
                     </form>
-                    <Button variant="contained" onClick={this.handleEdit}>cancel</Button>
-                    <Button onClick={this.handleSave}>save</Button>
+                    <button onClick={this.handleEdit}>cancel</button>
+                    <button onClick={this.handleSave}>save</button>
                 </div>  
             );
         }
         return(
             <div align="center">
-                <Typography>{"first name: "}{this.state.firstName}</Typography>
-                <Typography>{"last name: "}{this.state.lastName}</Typography>
-                <Button onClick={this.handleEdit}>edit</Button>
+                <p>{"first name: "}{this.state.firstName}</p>
+                <p>{"last name: "}{this.state.lastName}</p>
+                <button onClick={this.handleEdit}>edit</button>
             </div>
         );
     }
