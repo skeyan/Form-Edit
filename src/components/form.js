@@ -1,6 +1,6 @@
 import React from "react";
 // import PropTypes from "prop-types";
-//import { withStyles, Card, CardContent, Typography, Button } from '@material-ui/core/';
+import { withStyles, Card, CardContent, Typography, Button } from '@material-ui/core/';
 
 class Form extends React.Component {
     constructor() {
@@ -29,8 +29,7 @@ class Form extends React.Component {
     handleSave = () => {
         this.setState({
             firstName: this.tempFirstName,
-            lastName: this.tempLastName,
-            formToggle: false
+            lastName: this.tempLastName
         });
     }
     render() {
@@ -41,16 +40,16 @@ class Form extends React.Component {
                         <input placeholder= "First name" type="text" name="firstName" onChange={this.handleFirstNameChange}/>
                         <input placeholder= "Last name"  type="text" name="lastName" onChange={this.handleLastNameChange}/>
                     </form>
-                    <button onClick={this.handleEdit}>cancel</button>
-                    <button onClick={this.handleSave}>save</button>
+                    <Button variant="contained" onClick={this.handleEdit}>cancel</Button>
+                    <Button onClick={this.handleSave}>save</Button>
                 </div>  
             );
         }
         return(
             <div align="center">
-                <p>{"first name: "}{this.state.firstName}</p>
-                <p>{"last name: "}{this.state.lastName}</p>
-                <button onClick={this.handleEdit}>edit</button>
+                <Typography>{"first name: "}{this.state.firstName}</Typography>
+                <Typography>{"last name: "}{this.state.lastName}</Typography>
+                <Button onClick={this.handleEdit}>edit</Button>
             </div>
         );
     }
