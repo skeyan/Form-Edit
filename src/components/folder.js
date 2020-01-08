@@ -1,5 +1,4 @@
 import React from "react";
-import { withStyles, Card, CardContent, Typography, Button } from '@material-ui/core/';
 import "./styles/styles.css"
 
 export default class Folder extends React.Component {
@@ -19,7 +18,7 @@ export default class Folder extends React.Component {
             return(
                 <div align="center">
                     <Typography variant="h5">Home</Typography>
-                    <Button onClick={this.handleToggle}>toggle</Button>
+                    <button onClick={this.handleToggle}>toggle</button>
                 </div>
             ) 
         }
@@ -32,7 +31,7 @@ export default class Folder extends React.Component {
                         <li>File 2</li>
                         <li>File 3</li>
                     </ul><br/>
-                    <Button onClick={this.handleToggle}>toggle</Button>   
+                    <button onClick={this.handleToggle}>toggle</button>   
                 </div>
             );
         }
