@@ -33,7 +33,7 @@ class Form extends React.Component {
                         <input placeholder= "Last name"  type="text" name="lastName" onChange={this.handleChange}/>
                     </form>
                     <Button variant="contained" onClick={this.handleEdit}>cancel</Button>
-                    <Button>save</Button>
+                    {/* <Button>save</Button> */}
                 </div>  
             );
         }
