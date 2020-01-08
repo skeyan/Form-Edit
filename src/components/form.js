@@ -10,30 +10,38 @@ class Form extends React.Component {
             lastName: "",
             formToggle: false
         }
+        this.tempFirstName = "";
+        this.tempLastName = "";
     }
     handleEdit = () => {
         this.setState({
             formToggle: !this.state.formToggle
         });
     }
-    // handleChange = () => {
-
-    // }
+    handleFirstNameChange = (event) => {
+        this.tempFirstName = event.target.value;
+        console.log(this.tempFirstName);
+    }
+    handleLastNameChange = (event) => {
+        this.tempLastName = event.target.value;
+        console.log(this.tempLastName);
+    }
     handleSave = () => {
         this.setState({
-            
-        })
+            firstName: this.tempFirstName,
+            lastName: this.tempLastName
+        });
     }
     render() {
         if(this.state.formToggle){
             return(
                 <div align="center">
                     <form>
-                        <input placeholder= "First name" type="text" name="firstName" onChange={this.handleChange}/>
-                        <input placeholder= "Last name"  type="text" name="lastName" onChange={this.handleChange}/>
+                        <input placeholder= "First name" type="text" name="firstName" onChange={this.handleFirstNameChange}/>
+                        <input placeholder= "Last name"  type="text" name="lastName" onChange={this.handleLastNameChange}/>
                     </form>
                     <Button variant="contained" onClick={this.handleEdit}>cancel</Button>
-                    {/* <Button>save</Button> */}
+                    <Button onClick={this.handleSave}>save</Button>
                 </div>  
             );
         }
