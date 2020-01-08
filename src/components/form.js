@@ -22,10 +22,12 @@ class Form extends React.Component {
         this.tempFirstName = event.target.value;
         console.log(this.tempFirstName);
     }
+    //changes last name in temporary variable
     handleLastNameChange = (event) => {
         this.tempLastName = event.target.value;
         console.log(this.tempLastName);
     }
+    //moves temporary variables into state
     handleSave = () => {
         this.setState({
             firstName: this.tempFirstName,
