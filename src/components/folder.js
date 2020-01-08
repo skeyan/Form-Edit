@@ -37,7 +37,6 @@ class Folder extends React.Component {
         }
         
     }
-
 }
 
 export default Folder;
