@@ -17,7 +17,7 @@ export default class Folder extends React.Component {
         if(!this.state.showFiles){
             return(
                 <div align="center">
-                    <Typography variant="h5">Home</Typography>
+                    <h1>Home</h1>
                     <button onClick={this.handleToggle}>toggle</button>
                 </div>
             ) 
@@ -25,7 +25,7 @@ export default class Folder extends React.Component {
         else{
             return(
                 <div align="center">
-                    <Typography variant="h5">Home</Typography>
+                    <h1>Home</h1>
                     <ul>
                         <li>File 1</li>
                         <li>File 2</li>
