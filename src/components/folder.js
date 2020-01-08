@@ -1,6 +1,5 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import { withStyles, Card, CardContent, Typography, Button } from '@material-ui/core/';
 import "./styles/styles.css"
 
 export default class Folder extends React.Component {
@@ -19,21 +18,21 @@ export default class Folder extends React.Component {
         if(!this.state.showFiles){
             return(
                 <div align="center">
-                    <Typography variant="h5">Home</Typography>
-                    <Button onClick={this.handleToggle}>toggle</Button>
+                    <h1>Home</h1>
+                    <button onClick={this.handleToggle}>toggle</button>
                 </div>
             ) 
         }
         else{
             return(
                 <div align="center">
-                    <Typography variant="h5">Home</Typography>
+                    <h1>Home</h1>
                     <ul>
                         <li>File 1</li>
                         <li>File 2</li>
                         <li>File 3</li>
                     </ul><br/>
-                    <Button onClick={this.handleToggle}>toggle</Button>   
+                    <button onClick={this.handleToggle}>toggle</button>   
                 </div>
             );
         }
