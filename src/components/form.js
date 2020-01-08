@@ -24,6 +24,7 @@ class Form extends React.Component {
                         <input placeholder= "First name" type="text" name="firstName"/>
                         <input placeholder= "Last name"  type="text" name="lastName"/>
                     </form>
+                    <Button></Button>
                 </div>  
             );
         }
