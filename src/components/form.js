@@ -18,6 +18,7 @@ class Form extends React.Component {
             formToggle: !this.state.formToggle
         });
     }
+    //changes first name in temporary variable
     handleFirstNameChange = (event) => {
         this.tempFirstName = event.target.value;
         console.log(this.tempFirstName);
