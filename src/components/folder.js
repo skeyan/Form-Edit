@@ -1,36 +1,43 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { withStyles, Card, CardContent, Typography, Button } from '@material-ui/core/';
+import "./styles/styles.css"
 
-class Folder extends React.Component {
+export default class Folder extends React.Component {
     constructor() {
         super();
         this.state = {
-            toggle : false
+            showFiles : false
         }
     }
     handleToggle = () => {
-        this.state.toggle = !this.state.toggle;
+        this.setState({
+            showFiles : !this.state.showFiles
+        })
     }
     render() {
-        if(this.state.toggle){
-            <div>
-                <Typography variant="h5">Home</Typography>
-                <Button onClick={this.handleToggle}/>
-            </div>
+        if(!this.state.showFiles){
+            return(
+                <div align="center">
+                    <Typography variant="h5">Home</Typography>
+                    <Button onClick={this.handleToggle}>toggle</Button>
+                </div>
+            ) 
         }
-        return(
-            <div>
-                <Typography variant="h5">Home</Typography>
-                <Typography variant="h5">File 1</Typography>
-                <Typography variant="h5">File 2</Typography>
-                <Typography variant="h5">File 3</Typography>
-            </div>
-        );
+        else{
+            return(
+                <div align="center">
+                    <Typography variant="h5">Home</Typography>
+                    <ul>
+                        <li>File 1</li>
+                        <li>File 2</li>
+                        <li>File 3</li>
+                    </ul><br/>
+                    <Button onClick={this.handleToggle}>toggle</Button>   
+                </div>
+            );
+        }
+        
     }
-
-}
-
-Folder.PropTypes = {
 
 }

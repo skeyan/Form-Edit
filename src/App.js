@@ -6,7 +6,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import Form from "./components/form";
-//import Folder from "./components/folder";
+import Folder from "./components/folder";
 
 
 class App extends React.Component {
@@ -17,7 +17,13 @@ class App extends React.Component {
   };
   render() {
     return (
-      <Form/>
+      <div>
+        <br/>
+        <Form/>
+        <br/><br/>
+        <Folder/>
+      </div>
+      
     );
   }
 }
